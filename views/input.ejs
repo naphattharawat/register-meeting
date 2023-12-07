@@ -1,0 +1,102 @@
+<html>
+
+<head>
+  <!-- <link href="../public/css/bootstrap-5.3.2-dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="../public/css/style.css" rel="stylesheet">
+  <script src="../public/css/bootstrap-5.3.2-dist/js/bootstrap.min.js"></script> -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous">
+  </script>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+</head>
+
+<body style="background-color: green;">
+  <div style="width:99%;">
+    <div class="row">
+      <div class="col-12" style="padding:3rem">
+        <div class="card" style="background-color: hsla(0,0%,100%,.6);height: 80vh">
+          <div class="card-body">
+            <div class="row">
+              <div class="col-6" style="text-align: center;" style="padding: 2rem;">
+                <h5>ข้อมูลการลงทะเบียน</h5>
+                <div class="row">
+                  <div class="col-4">ชื่อ</div>
+                  <div class="col-8">
+                    <input type="text" class="form-control" readonly value="<%= fname %>">
+                  </div>
+                </div>
+                <div class="row">
+                  <div class="col-4">นามสกุล</div>
+                  <div class="col-8">
+                    <input type="text" class="form-control" readonly value="<%= lname %>">
+                  </div>
+                </div>
+                <div class="row">
+                  <div class="col-4">email</div>
+                  <div class="col-8">
+                    <input type="text" name="email" class="form-control" value="<%= email %>">
+                  </div>
+                </div>
+                <div class="row">
+                  <div class="col-4">เบอร์โทรศัพท์</div>
+                  <div class="col-8">
+                    <input type="text" name="tel" class="form-control" placeholder="กรุณาระบุ">
+                  </div>
+                </div>
+                <div class="row">
+                  <div class="col-12">
+                    <input type="hidden" name="token" value="<%= token %>">
+                    <button id="btn" class="btn btn-success btn-block">ลงทะเบียน</button>
+                  </div>
+                </div>
+              </div>
+              <div class="col-6" style="padding: 2rem;">
+                <div style="width:100%;text-align: center;">
+
+                  <h5>กำหนดการอบรม</h5>
+                  <h6>วันที่ 18 ธันวาคม 2566 พะเยา สป.สัญจร</h6>
+                  <h6>9.00 - 10.30 น.</h6>
+
+                </div>
+                <h5>รายละเอียด</h5>
+                <ul>
+                  <li>
+                    รพ.พะเยานำเสนอ Cybersecurity
+                  </li>
+                  <li>
+                    Comment, Review -> จะเชิญใครเป็น Commentater ดีครับ อ.กิตติว่าง 10.00-10.30
+                  </li>
+                  <li>
+                    Threat landscape in health care + Health CISO Role -> นพ. ภาณุ​พงศ์​
+                  </li>
+                  <li>
+                    แนะนำหลักสูตร CISO เบื้องต้น
+                  </li>
+                  <li>
+                    CISO in action -> วิทยากร -> สกมช online</li>
+                </ul>
+
+
+
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+</body>
+
+</html>
+<script>
+  document.getElementById("btn").addEventListener("click", onClickRegister);
+
+  function onClickRegister() {
+    const email = document.getElementsByName("email")[0].value;
+    const token = document.getElementsByName("token")[0].value;
+    const tel = document.getElementsByName("tel")[0].value;
+    window.location.href = '/confirm?email=' + email + '&token=' + token + '&tel=' + tel;
+  }
+</script>
