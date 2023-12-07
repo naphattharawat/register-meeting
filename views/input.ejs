@@ -72,7 +72,7 @@
                 </div>
                 <div class="row" style="margin-top: 1rem;">
                   <div class="col-12">
-                    <input type="hidden" name="token" value="<%= token %>">
+                    <input type="hidden" name="token" value="<%=token%>">
                     <button id="btn" class="btn btn-success btn-block">ลงทะเบียน</button>
                   </div>
                 </div>
@@ -140,6 +140,6 @@
     const ciso_name2 = document.getElementsByName("ciso_name2")[0].value;
     const meeting_type = document.getElementsByName("meeting_type")[0].value;
     window.location.href =
-      `https://mymoph.moph.go.th/meeting/confirm/?email=${email}&token${token}&tel=${tel}&ciso=${ciso}&ciso_name=${ciso_name}&ciso_name2=${ciso_name2}&meeting_type=${meeting_type}`;
+      `https://mymoph.moph.go.th/meeting/confirm/?email=${email}&token=${token}&tel=${tel}&ciso=${ciso}&ciso_name=${ciso_name}&ciso_name2=${ciso_name2}&meeting_type=${meeting_type}`;
   }
 </script>
