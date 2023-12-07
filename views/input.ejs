@@ -20,31 +20,57 @@
             <div class="row">
               <div class="col-6" style="text-align: center;" style="padding: 2rem;">
                 <h5>ข้อมูลการลงทะเบียน</h5>
-                <div class="row">
+                <div class="row" style="margin-top: 1rem;">
                   <div class="col-4">ชื่อ</div>
                   <div class="col-8">
                     <input type="text" class="form-control" readonly value="<%= fname %>">
                   </div>
                 </div>
-                <div class="row">
+                <div class="row" style="margin-top: 1rem;">
                   <div class="col-4">นามสกุล</div>
                   <div class="col-8">
                     <input type="text" class="form-control" readonly value="<%= lname %>">
                   </div>
                 </div>
-                <div class="row">
+                <div class="row" style="margin-top: 1rem;">
                   <div class="col-4">email</div>
                   <div class="col-8">
                     <input type="text" name="email" class="form-control" value="<%= email %>">
                   </div>
                 </div>
-                <div class="row">
+                <div class="row" style="margin-top: 1rem;">
                   <div class="col-4">เบอร์โทรศัพท์</div>
                   <div class="col-8">
                     <input type="text" name="tel" class="form-control" placeholder="กรุณาระบุ">
                   </div>
                 </div>
-                <div class="row">
+                <div class="row" style="margin-top: 1rem;">
+                  <div class="col-4"></div>
+                  <div class="col-4" style="text-align: left;">
+                    <input type="radio" name="ciso" value="Y"> เป็น CISO ประจำ/ของ
+                  </div>
+                  <div class="col-4">
+                    <input type="text" class="form-control"  name="ciso_name" placeholder="โปรดระบุ เช่น เขต 1">
+                  </div>
+                  <div class="col-4"></div>
+                  <div class="col-4" style="text-align: left;">
+                    <input type="radio"   name="ciso" value="N"> เป็นผู้แทน CISO ประจำ/ของ
+                  </div>
+                  <div class="col-4">
+                    <input type="text" class="form-control"  name="ciso_name2" placeholder="โปรดระบุ เช่น สสจ.นนฯ">
+                  </div>
+                </div>
+                <div class="row" style="margin-top: 1rem;">
+                  <div class="col-4"></div>
+                  <div class="col-8" style="text-align: left;">
+                    <input type="radio"   name="meeting_type" value="onsite"> เข้าร่วมที่ห้องประชุม
+                  </div>
+                  <div class="col-4"></div>
+                  <div class="col-8" style="text-align: left;">
+                    <input type="radio"   name="meeting_type" value="online"> เข้าร่วมออนไลน์
+                  </div>
+                </div>
+                <div class="row" style="margin-top: 1rem;">
                   <div class="col-12">
                     <input type="hidden" name="token" value="<%= token %>">
                     <button id="btn" class="btn btn-success btn-block">ลงทะเบียน</button>
@@ -54,27 +80,39 @@
               <div class="col-6" style="padding: 2rem;">
                 <div style="width:100%;text-align: center;">
 
-                  <h5>กำหนดการอบรม</h5>
-                  <h6>วันที่ 18 ธันวาคม 2566 พะเยา สป.สัญจร</h6>
-                  <h6>9.00 - 10.30 น.</h6>
+                  <h4>กำหนดการประชุม</h4>
+                  <h5>ประชุมผู้บริหารความมั่นคงปลอดภัยสารสนเทศระดับสูงของสำนักงานปลัดกระทรวงสาธารณสุข ครั้งที่ 1</h5>
+                  <h5>หัวข้อ Cyber Security</h5>
+                  <h6>วันที่ 18 ธันวาคม 2566 เวลา 09.00 – 10.30 น.</h6>
+                  <h6>ณ ห้องประชุมโรงพยาบาลพะเยา และผ่าน Webex</h6>
+
 
                 </div>
+                <br>
+                <h7>กลุ่มเป้าหมายผู้เข้าร่วมประชุม ได้แก่ ผู้บริหารความมั่นคงปลอดภัยสารสนเทศระดับสูง (CISO)
+                  ระดับโรงพยาบาล ระดับจังหวัด ระดับเขตสุขภาพ ในสังกัดสำนักงานปลัดกระทรวงสาธารณสุขทั่วประเทศ</h7>
+                <br>
+                <br>
                 <h5>รายละเอียด</h5>
                 <ul>
                   <li>
-                    รพ.พะเยานำเสนอ Cybersecurity
+                    โรงพยาบาลพะเยา นำเสนอการดำเนินงาน Cyber Security ของโรงพยาบาล
                   </li>
                   <li>
-                    Comment, Review -> จะเชิญใครเป็น Commentater ดีครับ อ.กิตติว่าง 10.00-10.30
+                    บรรยายเรื่อง Threat Landscape in health care และบทบาทหน้าที่ของ Health CISO โดย นพ.ภาณุพงศ์
+                    ตันติรัตน์ รองผู้อำนวยการศูนย์เทคโนโลยีสารสนเทศและการสื่อสาร สป.สธ.
                   </li>
                   <li>
-                    Threat landscape in health care + Health CISO Role -> นพ. ภาณุ​พงศ์​
+                    บรรยายเรื่อง หลักสูตร CISO เบื้องต้น โดย นพ.สุรัคเมธ มหาศิริมงคล
+                    ผู้อำนวยการศูนย์เทคโนโลยีสารสนเทศและการสื่อสาร สป.สธ.
                   </li>
                   <li>
                     แนะนำหลักสูตร CISO เบื้องต้น
                   </li>
                   <li>
-                    CISO in action -> วิทยากร -> สกมช online</li>
+                    บรรยาย (online) เรื่อง CISO in action โดย วิทยากรจาก สกมช.
+                    (สำนักงานคณะกรรมการการรักษาความมั่นคงปลอดภัยไซเบอร์)
+                  </li>
                 </ul>
 
 
@@ -97,6 +135,11 @@
     const email = document.getElementsByName("email")[0].value;
     const token = document.getElementsByName("token")[0].value;
     const tel = document.getElementsByName("tel")[0].value;
-    window.location.href = 'https://mymoph.moph.go.th/meeting/confirm/?email=' + email + '&token=' + token + '&tel=' + tel;
+    const ciso = document.getElementsByName("ciso")[0].value;
+    const ciso_name = document.getElementsByName("ciso_name")[0].value;
+    const ciso_name2 = document.getElementsByName("ciso_name2")[0].value;
+    const meeting_type = document.getElementsByName("meeting_type")[0].value;
+    window.location.href =
+      `https://mymoph.moph.go.th/meeting/confirm/?email=${email}&token${token}&tel=${tel}&ciso=${ciso}&ciso_name=${ciso_name}&ciso_name2=${ciso_name2}&meeting_type=${meeting_type}`;
   }
 </script>

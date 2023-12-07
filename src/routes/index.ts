@@ -56,10 +56,11 @@ router.get('/callback', async (req: Request, res: Response) => {
 
 
 router.get('/confirm', async (req: Request, res: Response) => {
-  const { email, token, tel } = req.query;
+  const { email, token, tel, ciso, ciso_name, ciso_name2, meeting_type } = req.query;
   try {
     const profile: any = await loginModel.getProfile(token);
     if (profile.ok) {
+
       if (profile.user.is_kyc == 'Y') {
         await loginModel.save(req.db, {
           cid: profile.user.cid,
@@ -67,7 +68,10 @@ router.get('/confirm', async (req: Request, res: Response) => {
           lname: profile.user.last_name,
           hospcode: profile.user.hospcode,
           email: email,
-          tel: tel
+          tel: tel,
+          ciso: ciso,
+          ciso_name: ciso == 'Y' ? ciso_name : ciso_name2,
+          meeting_type: meeting_type
         })
         res.render('confirm')
       } else {
@@ -83,6 +87,20 @@ router.get('/confirm', async (req: Request, res: Response) => {
     res.send();
   }
 
+});
+
+router.get('/input', async (req: Request, res: Response) => {
+  try {
+    res.render('input', {
+      fname: 'profile.user.first_name',
+      lname: 'profile.user.last_name',
+      email: 'profile.user.email',
+      hospcode: 'profile.user.hospcode',
+      token: 'token.access_token',
+    })
+  } catch (error) {
+    console.log(error);
+  }
 });
 
 function makeid(length) {
