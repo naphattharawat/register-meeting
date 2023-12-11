@@ -15,76 +15,76 @@
   <div style="width:99%;">
     <div class="row">
       <div class="col-12" style="padding:3rem">
-        <div class="card" style="background-color: hsla(0,0%,100%,.6);height: 80vh">
+        <div class="card" style="background-color: hsla(0,0%,100%,.6);height: 90vh">
           <div class="card-body">
             <div class="row">
-              <div class="col-6" style="text-align: center;" style="padding: 2rem;">
+              <div class="col-12 col-sm-12 col-md-12 col-lg-6" style="text-align: center;" style="padding: 2rem;">
                 <h5>ข้อมูลการลงทะเบียน</h5>
                 <div class="row" style="margin-top: 1rem;">
-                  <div class="col-4">ชื่อ</div>
+                  <div class="col-4" style="text-align: right;">ชื่อ</div>
                   <div class="col-8">
                     <input type="text" class="form-control" readonly value="<%= fname %>">
                   </div>
                 </div>
                 <div class="row" style="margin-top: 1rem;">
-                  <div class="col-4">นามสกุล</div>
+                  <div class="col-4"  style="text-align: right;">นามสกุล</div>
                   <div class="col-8">
                     <input type="text" class="form-control" readonly value="<%= lname %>">
                   </div>
                 </div>
                 <div class="row" style="margin-top: 1rem;">
-                  <div class="col-4">email</div>
+                  <div class="col-4"  style="text-align: right;">email</div>
                   <div class="col-8">
                     <input type="text" name="email" class="form-control" value="<%= email %>">
                   </div>
                 </div>
                 <div class="row" style="margin-top: 1rem;">
-                  <div class="col-4">เบอร์โทรศัพท์</div>
+                  <div class="col-4"  style="text-align: right;">เบอร์โทรศัพท์</div>
                   <div class="col-8">
                     <input type="text" name="tel" class="form-control" placeholder="กรุณาระบุ">
                   </div>
                 </div>
                 <div class="row" style="margin-top: 1rem;">
                   <div class="col-4"></div>
-                  <div class="col-4" style="text-align: left;">
+                  <div class="col-4" style="text-align: left;height: 2rem;align-self: center;">
                     <input type="radio" name="ciso" value="ciso"> เป็น CISO ประจำ/ของ
                   </div>
                   <div class="col-4">
-                    <input type="text" class="form-control" name="ciso_name" placeholder="โปรดระบุ เช่น เขต 1">
+                    <input type="text" style="height: 2rem;" class="form-control" name="ciso_name" placeholder="โปรดระบุ เช่น เขต 1">
                   </div>
                   <div class="col-4"></div>
-                  <div class="col-4" style="text-align: left;">
+                  <div class="col-4" style="text-align: left;height: 2rem;align-self: center;">
                     <input type="radio" name="ciso" value="ผู้แทนciso"> เป็นผู้แทน CISO ประจำ/ของ
                   </div>
                   <div class="col-4">
-                    <input type="text" class="form-control" name="ciso_name2" placeholder="โปรดระบุ เช่น สสจ.นนฯ">
+                    <input type="text" style="height: 2rem;" class="form-control" name="ciso_name2" placeholder="โปรดระบุ เช่น สสจ.นนฯ">
                   </div>
 
                   <div class="col-4"></div>
-                  <div class="col-8" style="text-align: left;">
+                  <div class="col-8" style="text-align: left;height: 2rem;align-self: center;">
                     <input type="radio" name="ciso" value="นพ.สสจ.">นพ.สสจ.
                   </div>
                   <div class="col-4"></div>
-                  <div class="col-8" style="text-align: left;">
+                  <div class="col-8" style="text-align: left;height: 2rem;align-self: center;">
                     <input type="radio" name="ciso" value="ผอ.รพ.">ผอ.รพ.
                   </div>
                   <div class="col-4"></div>
-                  <div class="col-8" style="text-align: left;">
+                  <div class="col-8" style="text-align: left;height: 2rem;align-self: center;">
                     <input type="radio" name="ciso" value="ไอที สสจ.">ไอที สสจ.
                   </div>
                   <div class="col-4"></div>
-                  <div class="col-8" style="text-align: left;">
+                  <div class="col-8" style="text-align: left;height: 2rem;align-self: center;">
                     <input type="radio" name="ciso" value="ไอที รพ.">ไอที รพ.
                   </div>
                 </div>
                 <div class="row" style="margin-top: 1rem;">
                   <div class="col-4"></div>
-                  <div class="col-8" style="text-align: left;">
+                  <div class="col-8" style="text-align: left;height: 2rem;align-self: center;">
                     <input type="radio" name="meeting_type" value="onsite"> เข้าร่วมที่ห้องประชุม
                   </div>
                   <div class="col-4"></div>
-                  <div class="col-8" style="text-align: left;">
-                    <input type="radio" name="meeting_type" value="online"> เข้าร่วมออนไลน์
+                  <div class="col-8" style="text-align: left;height: 2rem;align-self: center;">
+                    <input type="radio" name="meeting_type" value="online" checked> เข้าร่วมออนไลน์
                   </div>
                 </div>
                 <div class="row" style="margin-top: 1rem;">
@@ -94,7 +94,7 @@
                   </div>
                 </div>
               </div>
-              <div class="col-6" style="padding: 2rem;">
+              <div class="col-12 col-sm-12 col-md-12 col-lg-6" style="padding: 2rem;">
                 <div style="width:100%;text-align: center;">
 
                   <h4>กำหนดการประชุม</h4>

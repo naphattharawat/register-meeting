@@ -91,7 +91,7 @@ router.get('/confirm', async (req: Request, res: Response) => {
 
 router.get('/input', async (req: Request, res: Response) => {
   try {
-    res.render('input', {
+    res.render('confirm', {
       fname: 'profile.user.first_name',
       lname: 'profile.user.last_name',
       email: 'profile.user.email',
